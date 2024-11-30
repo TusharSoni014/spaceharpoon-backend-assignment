@@ -5,10 +5,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Base(DeclarativeBase):
-  pass
+    pass
+
 
 engine = create_async_engine(
-  url= os.getenv("DATABASE_URL"),
-  echo=True
+    url=os.getenv("DATABASE_URL", ""),
+    echo=True
 )
