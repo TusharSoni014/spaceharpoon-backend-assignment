@@ -12,3 +12,4 @@ class Books(Base):
   description = Column(String, nullable=True)
   price = Column(Float, nullable=False)
   is_available = Column(Boolean, default=True)
+  
