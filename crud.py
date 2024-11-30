@@ -65,4 +65,5 @@ class Crud:
             if not book:
                 raise HTTPException(status_code=404, detail="Book Not found!")
             await session.delete(book)
+            await session.commit() 
             return {"message": "book deleted success!"}
